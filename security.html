@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSAS Security Monitoring</title>
+  <link rel="stylesheet" href="security.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">OSAS</div>
+    <ul class="menu">
+  <li>
+    <a href="dashboard.html">
+      <span class="icon">🏠</span><span class="text">Dashboard</span>
+    </a>
+  </li>
+
+  <li>
+    <a href="incidentreport.html">
+      <span class="icon">📝</span><span class="text">Incident Report</span>
+    </a>
+  </li>
+
+  <li class="active">
+    <a href="emergency.html">
+      <span class="icon">🚨</span><span class="text">Emergency</span>
+    </a>
+  </li>
+
+  <li>
+    <a href="security.html">
+      <span class="icon">📹</span><span class="text">Security Monitoring</span>
+    </a>
+  </li>
+
+  <li>
+    <a href="safety.html">
+      <span class="icon">🛡️</span><span class="text">Safety Profiling</span>
+    </a>
+  </li>
+
+  <li>
+    <a href="violation.html">
+      <span class="icon">⚖️</span><span class="text">Violation & Discipline</span>
+    </a>
+  </li>
+</ul>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+      <span>Security Monitoring</span>
+      <span class="close">✕</span>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- CARD -->
+      <div class="card security-card">
+
+        <h2>VISITOR LOGS</h2>
+
+        <!-- RECORD HEADER -->
+        <div class="records-header">
+          <span class="records-title">LOGS ENTRIES & EXIT<br><strong>RECORDS</strong></span>
+
+          <input type="text" placeholder="🔍 Search" />
+
+          <span class="date">DATE: DEC 05, 2025</span>
+        </div>
+
+        <!-- TABLE -->
+        <table class="records-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Visitor's Name</th>
+              <th>Vehicle type</th>
+              <th>Time In</th>
+              <th>Time Out</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>John</td><td>4 wheels</td><td>11:00PM</td><td>10:00AM</td></tr>
+            <tr><td>2</td><td>John</td><td>2 wheels</td><td>12:30PM</td><td>2:00PM</td></tr>
+            <tr><td>3</td><td>John</td><td>3 wheels</td><td>4:30AM</td><td>3:00PM</td></tr>
+            <tr><td>4</td><td>John</td><td>2 wheels</td><td>2:00PM</td><td>5:00PM</td></tr>
+          </tbody>
+        </table>
+
+        <!-- BOTTOM SECTION -->
+        <div class="bottom-section">
+
+          <div class="map-box">
+            <h4>Security patrol schedule tracking</h4>
+            <img src="school-map.png" alt="School Map" />
+          </div>
+
+          <div class="guard-info">
+            <p><strong>Guard 1</strong> – Morning, Afternoon, Evening</p>
+            <p><strong>Guard 2</strong> – Checking Hallways, Gates,<br>Classrooms, Parking area</p>
+          </div>
+
+        </div>
+
+        <div class="download-btn">
+          <button>Download</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

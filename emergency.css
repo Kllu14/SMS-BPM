@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ===== PAGE ===== */
+body {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #0b5dbb, #0a1b4f);
+  color: #fff;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 70px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0b5fc1, #072a6f);
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar:hover {
+  width: 230px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  white-space: nowrap;
+}
+
+/* Make links clickable */
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  font-size: 14px;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Hover and active highlight */
+.menu li:hover a,
+.menu li.active a {
+  background: rgba(255, 255, 255, 0.15);
+  border-left: 4px solid #fff;
+}
+
+.icon {
+  font-size: 18px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.text {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar:hover .text {
+  opacity: 1;
+}
+
+
+/* ===== MAIN ===== */
+.main {
+  flex: 1;
+  padding: 20px 40px;
+  margin-left: 70px;           /* initial sidebar width */
+  transition: margin-left 0.3s ease;
+}
+
+/* sidebar hover expands main content */
+.sidebar:hover ~ .main {
+  margin-left: 230px;           /* expanded sidebar width */
+}
+
+/* ===== TOPBAR (Dashboard style) ===== */
+.topbar {
+  height: 60px;
+  background: linear-gradient(90deg, #2d6bff, #0a1f5c);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: 100%;                 /* full width of main content */
+  box-sizing: border-box;      /* include padding in width */
+}
+
+
+
+
+/* ===== CONTENT ===== */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 60px);
+}
+
+/* ===== CARD ===== */
+.emergency-card {
+  width: 100%;
+  max-width: 900px;
+  background: linear-gradient(180deg, #142f96, #050a2a);
+  border-radius: 25px;
+  padding: 35px 40px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+}
+
+.emergency-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+/* ===== SCHEDULE ===== */
+.schedule-container {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 25px;
+}
+
+.schedule-box {
+  flex: 1;
+  text-align: center;
+}
+
+.schedule-box h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* ===== CALENDAR ===== */
+.calendar-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.calendar-ui {
+  color: #000;
+}
+
+.calendar-header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.calendar-days,
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendar-days span {
+  font-size: 11px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.calendar-dates span {
+  font-size: 12px;
+  padding: 6px 0;
+  border-radius: 6px;
+}
+
+.calendar-dates span:hover {
+  background: #e9f0ff;
+}
+
+.calendar-dates .muted {
+  color: #aaa;
+}
+
+/* ===== BUTTONS ===== */
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.time-btn {
+  background: #1b2f75;
+  color: #fff;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.set-btn {
+  background: linear-gradient(90deg, #1cc4ff, #0d6efd);
+  border: none;
+  padding: 8px 28px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ===== REVIEW SECTION ===== */
+.review-section {
+  margin-top: 5px;
+}
+
+.review-section h4 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.review-field {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.review-field label {
+  width: 170px;
+  font-size: 13px;
+}
+
+.review-field input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,244 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* BODY BACKGROUND */
+body {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0b5fa5, #0a2d57);
+}
+
+/* ============================= */
+/* DASHBOARD-STYLE SIDEBAR ONLY */
+/* ============================= */
+
+.sidebar {
+  width: 70px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f7bdc, #0a2a6d); /* dashboard sidebar */
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.sidebar:hover {
+  width: 230px;
+}
+
+/* LOGO */
+.logo {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+/* MENU */
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  padding: 14px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.menu li.active,
+.menu li:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-left: 4px solid #fff;
+}
+
+.menu .icon {
+  font-size: 18px;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* TEXT HIDDEN BY DEFAULT */
+.menu .text {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* TEXT APPEARS ON HOVER */
+.sidebar:hover .menu .text {
+  opacity: 1;
+}
+
+/* MAIN CONTENT SHIFT (LIKE DASHBOARD) */
+.main {
+  flex: 1;
+  padding: 25px;
+  margin-left: 70px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar:hover ~ .main {
+  margin-left: 230px;
+}
+
+
+/* TOP BAR */
+.topbar {
+  height: 60px;
+  background: linear-gradient(90deg, #2b66ff, #0b1d5c);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+/* OUTER WHITE CARD */
+.card {
+  background: #ffffff;
+  width: 85%;
+  border-radius: 18px;
+  padding: 25px;
+}
+
+/* TITLE */
+.card h2 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+/* INNER DARK CARD */
+.card-body {
+  background: linear-gradient(180deg, #1a2f8f, #070c2d);
+  border-radius: 18px;
+  padding: 25px;
+  color: #ffffff;
+}
+
+/* RECORDS BAR */
+.records-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.records-bar strong {
+  font-size: 14px;
+}
+
+.records-bar input {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 13px;
+}
+
+/* TABLE */
+.status-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.status-table thead {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.status-table th,
+.status-table td {
+  padding: 10px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.status-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* STATUS COLORS */
+.allowed {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.not-allowed {
+  color: #f87171;
+  font-weight: 600;
+}
+
+/* FOOTER */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+.contacts p {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.contacts strong {
+  font-size: 13px;
+}
+
+/* BUTTONS */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.view-btn {
+  background: #38bdf8;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.download-btn {
+  background: #1e1b4b;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+}

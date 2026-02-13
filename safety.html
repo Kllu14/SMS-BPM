@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Safety Profiling</title>
+<link rel="stylesheet" href="safety.css" />
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="logo">OSAS</div>
+  <ul class="menu">
+  <li>
+    <a href="dashboard.html">
+      <span class="icon">🏠</span><span class="text">Dashboard</span>
+    </a>
+  </li>
+
+  <li>
+    <a href="incidentreport.html">
+      <span class="icon">📝</span><span class="text">Incident Report</span>
+    </a>
+  </li>
+
+  <li>
+    <a href="emergency.html">
+      <span class="icon">🚨</span><span class="text">Emergency</span>
+    </a>
+  </li>
+
+  <li>
+    <a href="security.html">
+      <span class="icon">📹</span><span class="text">Security Monitoring</span>
+    </a>
+  </li>
+
+  <li class="active">
+    <a href="safety.html">
+      <span class="icon">🛡️</span><span class="text">Safety Profiling</span>
+    </a>
+  </li>
+
+  <li>
+    <a href="violation.html">
+      <span class="icon">⚖️</span><span class="text">Violation & Discipline</span>
+    </a>
+  </li>
+</ul>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- TOP BAR -->
+  <div class="topbar">Safety Profiling</div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- CARD (same style as dashboard) -->
+    <div class="card">
+      <h2>STUDENT PROFILE STATUS</h2>
+
+      <div class="card-body">
+
+        <!-- FULL WIDTH CONTENT (dashboard-like) -->
+        <div class="card-left" style="width:100%;">
+
+          <!-- RECORDS BAR -->
+          <div class="records-bar">
+            <strong>RECORDS</strong>
+            <input type="text" placeholder="Search">
+          </div>
+
+          <!-- TABLE -->
+          <table class="status-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Student Name</th>
+                <th>Course & Section</th>
+                <th>Type of Program</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>BSIT 31019</td>
+                <td>FIELD TRIP</td>
+                <td class="allowed">ALLOWED</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>John</td>
+                <td>BSIT 32018</td>
+                <td>RETREAT</td>
+                <td class="allowed">ALLOWED</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>John</td>
+                <td>BSIT 32019</td>
+                <td>STAGEPLAY</td>
+                <td class="not-allowed">NOT ALLOWED</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>John</td>
+                <td>BSIT 31014</td>
+                <td>FOUNDATION</td>
+                <td class="not-allowed">NOT ALLOWED</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- FOOTER -->
+          <div class="card-footer">
+            <div class="contacts">
+              <p>Emergency contact numbers</p>
+              <strong>0123456789 &nbsp; | &nbsp; 02-123456789</strong>
+            </div>
+
+            <div class="actions">
+              <button class="view-btn">VIEW STATUS</button>
+              <button class="download-btn">Download</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
